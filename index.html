@@ -5,14 +5,46 @@
         <title>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</title>
         <script src="vendor/d3.v4.min.js"></script>
         <script src="vendor/simple-statistics.v5.0.0.min.js"></script>
+        <script src="vendor/d3-tip/d3-tip.js"></script>
 
         <style>
+            body {
+                font-family: sans-serif;
+            }
+
             .point, .dimmed {
                 opacity: 0.2;
             }
 
             .highlighted {
                 opacity: 1.0;
+            }
+
+            .d3-tip {
+                line-height: 1;
+                padding: 12px;
+                background: rgba(0, 0, 0, 1);
+                color: #fff;
+                border-radius: 2px;
+                pointer-events: none;
+                text-align: center;
+                line-height: 120%;
+            }
+            .d3-tip:after {
+                box-sizing: border-box;
+                display: inline;
+                font-size: 10px;
+                width: 100%;
+                line-height: 1;
+                color: rgba(0, 0, 0, 0.8);
+                content: "\25BC";
+                position: absolute;
+                text-align: center;
+            }
+            .d3-tip.n:after {
+                margin: -1px 0 0 0;
+                top: 100%;
+                left: 0;
             }
         </style>
     </head>
@@ -60,6 +92,13 @@
                 "Linke": "#be3075",
             };
 
+            var tip = d3.tip()
+                .attr("class", "d3-tip")
+                .offset([-10, 0])
+                .html(function(d) {
+                    return d.type + "<br/>" + d.party + "<br/>" + d.district + "<br/>" + d.percentage + "%";
+                });
+
             function getTickValues(min, max) {
                 var tickValues = [min, max];
                 var exp = Math.max(Math.floor(Math.log10(Math.abs(min))), Math.ceil(Math.log10(Math.abs(max))));
@@ -90,7 +129,11 @@
                 d3.selectAll(".line")
                     .interrupt()
                     .transition(t)
-                    .style("opacity", 0.2);
+                    .style("opacity", 0.1);
+                d3.selectAll(".point")
+                    .interrupt()
+                    .transition(t)
+                    .style("opacity", 0.1);
                 d3.selectAll("." + party)
                     .interrupt()
                     .transition(t)
@@ -141,6 +184,8 @@
                             .attr("d", function (d) { return voteSymbols[d.type](); })
                             .attr('fill', function (d) { return partyColors[d.party]; })
 
+                    svg.call(tip);
+
                     var partyLines = {};
                     for (var party in partyColors) {
                         (function (party) {
@@ -169,8 +214,8 @@
 
                         svg.selectAll(".point")
                             .data(votes)
-                            .on("mouseover", function (d) { mouseIn(d.party); })
-                            .on("mouseout", mouseOut)
+                            .on("mouseover", function (d) { mouseIn(d.party); tip.show(d); })
+                            .on("mouseout", function (d) { mouseOut(); tip.hide(d); })
                             .transition(t)
                             .attr("transform", function (d) {
                                 var x = xScale(statistic.values[d.district]);
