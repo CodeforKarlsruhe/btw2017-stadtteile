@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</title>
+        <script src="vendor/d3.v4.min.js"></script>
+    </head>
+    <body>
+        <button id="button-next">Next</button>
+        <span id="statistic-title"></span>
+        <script>
+            var MARGIN = {top: 20, right: 50, bottom: 20, left: 50};
+            var OUTER_WIDTH = 960;
+            var OUTER_HEIGHT = 500;
+
+            var width = OUTER_WIDTH - MARGIN.left - MARGIN.right
+                height = OUTER_HEIGHT - MARGIN.top - MARGIN.bottom;
+
+            var svg = d3.select("body").append("svg")
+                .attr("width", OUTER_WIDTH)
+                .attr("height", OUTER_HEIGHT)
+                .append("g")
+                    .attr("transform", "translate(" + MARGIN.left + "," + MARGIN.top + ")");
+
+            var xScale = d3.scaleLinear()
+                .domain([0, 100])
+                .range([0, width]);
+            var yScale = d3.scaleLinear()
+                .domain([0, 40])
+                .range([height, 0]);
+
+            var xAxis = d3.axisBottom(xScale)
+                .ticks(5);
+            var yAxis = d3.axisLeft(yScale)
+                .ticks(5);
+
+            var points = svg.append("g");
+
+
+            var S, V;
+
+            /*
+            var DISTRICTS = [
+                "Beiertheim-Bulach",
+                "Daxlanden",
+                "Durlach",
+                "Grötzingen",
+                "Grünwettersbach",
+                "Grünwinkel",
+                "Hagsfeld",
+                "Hohenwettersbach",
+                "Innenstadt-Ost",
+                "Innenstadt-West",
+                "Knielingen",
+                "Mühlburg",
+                "Neureut",
+                "Nordstadt",
+                "Nordweststadt",
+                "Oberreut",
+                "Oststadt",
+                "Palmbach",
+                "Rintheim",
+                "Rüppurr",
+                "Stupferich",
+                "Südstadt",
+                "Südweststadt",
+                "Waldstadt",
+                "Weiherfeld-Dammerstock",
+                "Weststadt",
+                "Wolfartsweier"
+            ];
+            */
+
+
+            /*
+            var statistics = [
+                {
+                    "id": "wahlbeteiligung",
+                    "domain": [0, 100],
+                    "values": {
+                        "Knielingen": 20,
+                        "Nordstadt": 60,
+                    },
+                },
+                {
+                    "id": "kinder-und-jugendliche",
+                    "domain": [0, 30],
+                    "values": {
+                        "Knielingen": 10,
+                        "Nordstadt": 20,
+                    },
+                }
+            ];
+            */
+            var currentStatistic = 0;
+
+            // Transition settings
+            var t = d3.transition()
+                .duration(750);
+
+            /*
+            var votes = [
+                {"district": "Knielingen", "party": "CDU", "percentage": 20, "voteType": "Erststimme"},
+                {"district": "Knielingen", "party": "SPD", "percentage": 18, "voteType": "Erststimme"},
+                {"district": "Knielingen", "party": "CDU", "percentage": 19, "voteType": "Zweitstimme"},
+                {"district": "Knielingen", "party": "SPD", "percentage": 21, "voteType": "Zweitstimme"},
+                {"district": "Nordstadt", "party": "CDU", "percentage": 18, "voteType": "Erststimme"},
+                {"district": "Nordstadt", "party": "SPD", "percentage": 15, "voteType": "Erststimme"},
+                {"district": "Nordstadt", "party": "CDU", "percentage": 30, "voteType": "Zweitstimme"},
+                {"district": "Nordstadt", "party": "SPD", "percentage": 20, "voteType": "Zweitstimme"},
+            ];
+            */
+            var V;
+            var S;
+
+            var partyColors = {
+                "CDU": "#000",
+                "SPD": "#e3000f",
+                "AfD": "#009ee0",
+                "Grüne": "#1aa037",
+                "FDP": "#ffed00",
+                "Sonstige": "#ccc",
+            };
+
+            var voteSymbols = {
+                "Erststimme": d3.symbol().type(d3.symbolCircle),
+                "Zweitstimme": d3.symbol().type(d3.symbolTriangle),
+            }
+
+            d3.json("statistics.json", function (error, statistics) {
+                if (error) {
+                    throw error;
+                }
+                //console.log(statistics);
+                S = statistics;
+
+                d3.json("votes.json", function (error, votes) {
+                    if (error) {
+                        throw error;
+                    }
+                    //console.log(votes);
+                    V = votes;
+
+                    function transformDatum (d) {
+                        var x = xScale(statistics[currentStatistic].values[d.district]);
+                        var y = yScale(d.percentage);
+                        return "translate(" + x + "," + y + ")";
+                    }
+
+                    svg.append("g")
+                        .attr("class", "x axis")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(xAxis);
+                    svg.append("g")
+                        .attr("class", "y axis")
+                        .call(yAxis);
+
+                    points.selectAll()
+                        .data(votes)
+                        .enter().append("path")
+                            .attr("class", "point")
+                            .attr("d", function (d) { return voteSymbols[d.type](); })
+                            .attr('fill', function (d) { return partyColors[d.party]; })
+                            .attr("transform", transformDatum);
+
+                    d3.select('#button-next').on("click", function () {
+                        currentStatistic = (currentStatistic + 1) % statistics.length;
+                        console.log("currentStatistic = " + currentStatistic);
+
+                        xScale.domain(statistics[currentStatistic].domain);
+                        svg.selectAll(".x.axis")
+                            .transition(t)
+                            .call(xAxis);
+
+                        svg.selectAll(".point")
+                            .data(votes)
+                            .transition(t)
+                            .attr("transform", transformDatum);
+
+                        d3.select('#statistic-title').html(statistics[currentStatistic].title);
+                    });
+                });
+            });
+
+
+
+        </script>
+    </body>
+</html>
+
