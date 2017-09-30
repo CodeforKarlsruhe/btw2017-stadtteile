@@ -165,7 +165,7 @@
       "Neureut": 70.0,
       "Nordstadt": 64.2
     },
-    "domain": [0, 80],
+    "domain": [20, 80],
     "id": "gymnasium",
     "title": "Anteil Übergänge aufs Gymnasium"
   },
