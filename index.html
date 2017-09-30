@@ -88,13 +88,25 @@
             }
 
             function mouseIn(party) {
-                d3.selectAll(".line").classed("dimmed", true);
-                d3.selectAll("." + party).classed("highlighted", true);
+                d3.selectAll(".line")
+                    .interrupt()
+                    .transition(t)
+                    .style("opacity", 0.2);
+                d3.selectAll("." + party)
+                    .interrupt()
+                    .transition(t)
+                    .style("opacity", 1);
             }
 
             function mouseOut() {
-                d3.selectAll(".line").classed("dimmed", false);
-                d3.selectAll("*").classed("highlighted", false);
+                d3.selectAll(".line")
+                    .interrupt()
+                    .transition(t)
+                    .style("opacity", 1);
+                d3.selectAll(".point")
+                    .interrupt()
+                    .transition(t)
+                    .style("opacity", 0.2);
             }
 
             d3.json("statistics.json", function (error, statistics) {
