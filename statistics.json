@@ -29,10 +29,7 @@
       "Neureut": "49.9",
       "Nordstadt": "49.5"
     },
-    "domain": [
-      0,
-      60
-    ],
+    "domain": [40, 55],
     "title": "Frauenanteil",
     "id": "frauen"
   },
@@ -68,10 +65,7 @@
     },
     "id": "kinder-und-jugendliche",
     "title": "Anteil Einwohner bis 18 Jahre",
-    "domain": [
-      0,
-      30
-    ]
+    "domain": [5, 25]
   },
   {
     "values": {
@@ -103,10 +97,7 @@
       "Neureut": "13.4",
       "Nordstadt": "14.4"
     },
-    "domain": [
-      0,
-      30
-    ],
+    "domain": [10, 30],
     "id": "senioren",
     "title": "Anteil Einwohner ab 65 Jahre"
   },
@@ -174,10 +165,7 @@
       "Neureut": "70.0",
       "Nordstadt": "64.2"
     },
-    "domain": [
-      0,
-      100
-    ],
+    "domain": [0, 80],
     "id": "gymnasium",
     "title": "Anteil Übergänge aufs Gymnasium"
   },
@@ -213,7 +201,7 @@
     },
     "title": "Anteil Einwohner mit Migrationshintergrund",
     "id": "migranten",
-    "domain": [0, 50]
+    "domain": [10, 50]
   },
   {
     "values": {
@@ -247,7 +235,7 @@
     },
     "title": "Wahlbeteiligung",
     "id": "wahlbeteiligung",
-    "domain": [0, 100]
+    "domain": [60, 90]
   },
   {
     "values": {
@@ -281,7 +269,7 @@
     },
     "title": "Anteil Briefwähler",
     "id": "briefwaehler",
-    "domain": [0, 50]
+    "domain": [20, 50]
   },
   {
     "values": {
@@ -315,7 +303,7 @@
     },
     "title": "KA-Feedback Meldungen pro 1000 Einwohner",
     "id": "ka-feedback",
-    "domain": [0, 100]
+    "domain": [10, 90]
   },
   {
     "values": {
@@ -349,7 +337,7 @@
     },
     "title": "Arbeitslosenanteil",
     "id": "arbeitslose",
-    "domain": [0, 10]
+    "domain": [1, 7]
   },
   {
     "values": {
