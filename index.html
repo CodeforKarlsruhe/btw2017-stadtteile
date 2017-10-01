@@ -27,8 +27,9 @@
                 color: #fff;
                 border-radius: 2px;
                 pointer-events: none;
-                text-align: center;
                 line-height: 120%;
+                font-size: 15px;
+                text-align: center;
             }
             .d3-tip:after {
                 box-sizing: border-box;
@@ -45,6 +46,11 @@
                 margin: -1px 0 0 0;
                 top: 100%;
                 left: 0;
+            }
+            .d3-tip .district {
+                font-weight: bold;
+                border-bottom: 1px solid white;
+                margin-bottom: 5px;
             }
 
             text {
@@ -104,10 +110,7 @@
 
             var tip = d3.tip()
                 .attr("class", "d3-tip")
-                .offset([-10, 0])
-                .html(function(d) {
-                    return d.type + "<br/>" + d.party + "<br/>" + d.district + "<br/>" + d.percentage + "%";
-                });
+                .offset([-10, 0]);
 
             function getTickValues(min, max) {
                 var tickValues = [min, max];
@@ -264,6 +267,12 @@
 
                         d3.select("#subtitle").html(statistic.title);
                         d3.select(".x.axis-label").html(statistic.label);
+
+                        tip.html(function(d) {
+                            return '<div class="district">' + d.district + '</div>' +
+                                   '<div class="vote">' + d.type + ' ' + d.party + ' (%): ' + d.percentage + '</div>' +
+                                   '<div class="statistic">' + statistic.label + ': ' + statistic.values[d.district] + '</div>';
+                        });
                     }
 
                     d3.select('#button-next').on("click", function () {
