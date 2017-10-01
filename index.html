@@ -8,7 +8,19 @@
         <script src="vendor/d3-tip/d3-tip.js"></script>
 
         <style>
+            html {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            *, *:before, *:after {
+                box-sizing: inherit;
+            }
+
             body {
+                padding: 0;
+                margin: 0;
                 font-family: sans-serif;
             }
 
@@ -60,6 +72,10 @@
             .axis-label {
                 font-size: 15px;
             }
+
+            svg {
+                width: 100%;
+            }
         </style>
     </head>
     <body>
@@ -69,7 +85,7 @@
         <button id="button-next">Next</button>
         <script>
             var MARGIN = {top: 20, right: 50, bottom: 20, left: 50};
-            var OUTER_WIDTH = 960;
+            var OUTER_WIDTH = 500;
             var OUTER_HEIGHT = 500;
 
             var width = OUTER_WIDTH - MARGIN.left - MARGIN.right
@@ -188,7 +204,6 @@
                         .call(xAxis)
                         .append("text")
                             .attr("class", "x axis-label")
-                            .attr("x", width)
                             .attr("y", -6)
                             .style("text-anchor", "end")
                             .text("X-Label");
@@ -226,9 +241,13 @@
                         })(party);
                     }
 
-                    function showStatistic(index) {
+                    function showStatistic(index, transition) {
                         index = index % statistics.length;
                         currentStatistic = index;
+
+                        var t = d3.transition()
+                            .duration(transition ? 500 : 0);
+
                         var statistic = statistics[index];
                         var min = d3.min(d3.values(statistic.values));
                         var max = d3.max(d3.values(statistic.values));
@@ -266,7 +285,9 @@
                         }
 
                         d3.select("#subtitle").html(statistic.title);
-                        d3.select(".x.axis-label").html(statistic.label);
+                        d3.select(".x.axis-label")
+                            .attr("x", width)
+                            .html(statistic.label);
 
                         tip.html(function(d) {
                             return '<div class="district">' + d.district + '</div>' +
@@ -276,10 +297,18 @@
                     }
 
                     d3.select('#button-next').on("click", function () {
-                        showStatistic(currentStatistic + 1);
+                        showStatistic(currentStatistic + 1, true);
                     });
 
-                    showStatistic(currentStatistic);
+                    function resize() {
+                        OUTER_WIDTH = d3.select("svg").node().clientWidth;
+                        width = OUTER_WIDTH - MARGIN.left - MARGIN.right;
+                        xScale.range([0, width]);
+                        showStatistic(currentStatistic);
+                    }
+
+                    d3.select(window).on("resize", resize);
+                    resize();
                 });
             });
 
