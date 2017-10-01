@@ -31,6 +31,7 @@
     },
     "domain": [40, 55],
     "title": "Frauenanteil",
+    "label": "Frauenanteil (%)",
     "id": "frauen"
   },
   {
@@ -64,7 +65,8 @@
       "Nordstadt": 14.9
     },
     "id": "kinder-und-jugendliche",
-    "title": "Anteil Einwohner bis 18 Jahre",
+    "title": "Kinder und Jugendliche",
+    "label": "Anteil Einwohner bis 18 Jahre (%)",
     "domain": [5, 25]
   },
   {
@@ -99,7 +101,8 @@
     },
     "domain": [10, 30],
     "id": "senioren",
-    "title": "Anteil Einwohner ab 65 Jahre"
+    "title": "Senioren",
+    "label": "Anteil Einwohner ab 65 Jahre (%)"
   },
   {
     "values": {
@@ -131,7 +134,8 @@
       "Neureut": 23.4,
       "Nordstadt": 30.8
     },
-    "title": "Anteil Einwohner mit Migrationshintergrund",
+    "title": "Migranten",
+    "label": "Anteil Einwohner mit Migrationshintergrund (%)",
     "id": "migranten",
     "domain": [10, 50]
   },
@@ -166,6 +170,7 @@
       "Nordstadt": 78.8
     },
     "title": "Wahlbeteiligung",
+    "label": "Wahlbeteiligung (%)",
     "id": "wahlbeteiligung",
     "domain": [60, 90]
   },
@@ -199,7 +204,8 @@
       "Neureut": 28.7,
       "Nordstadt": 30.5
     },
-    "title": "Anteil Briefwähler",
+    "title": "Briefwähler",
+    "label": "Anteil Briefwähler (%)",
     "id": "briefwaehler",
     "domain": [20, 50]
   },
@@ -233,7 +239,8 @@
       "Neureut": 39.9,
       "Nordstadt": 58.8
     },
-    "title": "KA-Feedback Meldungen pro 1000 Einwohner",
+    "title": "KA-Feedback Meldungen",
+    "label": "KA-Feedback Meldungen pro 1000 Einwohner",
     "id": "ka-feedback",
     "domain": [10, 90]
   },
@@ -267,7 +274,8 @@
       "Neureut": 2.6,
       "Nordstadt": 3.5
     },
-    "title": "Arbeitslosenanteil",
+    "title": "Arbeitslose",
+    "label": "Arbeitslosenquote (%)",
     "id": "arbeitslose",
     "domain": [1, 7]
   },
@@ -301,7 +309,8 @@
       "Neureut": 34.9,
       "Nordstadt": 65.4
     },
-    "title": "Straftaten pro 1000 Einwohner",
+    "title": "Kriminalität",
+    "label": "Straftaten pro 1000 Einwohner",
     "id": "straftaten",
     "domain": [0, 500]
   }

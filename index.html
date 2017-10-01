@@ -46,11 +46,21 @@
                 top: 100%;
                 left: 0;
             }
+
+            text {
+                fill: #000;
+            }
+
+            .axis-label {
+                font-size: 15px;
+            }
         </style>
     </head>
     <body>
+        <h1>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</h1>
+        <h2 id="subtitle"></h2>
+        <svg></svg>
         <button id="button-next">Next</button>
-        <span id="statistic-title"></span>
         <script>
             var MARGIN = {top: 20, right: 50, bottom: 20, left: 50};
             var OUTER_WIDTH = 960;
@@ -59,7 +69,7 @@
             var width = OUTER_WIDTH - MARGIN.left - MARGIN.right
                 height = OUTER_HEIGHT - MARGIN.top - MARGIN.bottom;
 
-            var svg = d3.select("body").append("svg")
+            var svg = d3.select("svg")
                 .attr("width", OUTER_WIDTH)
                 .attr("height", OUTER_HEIGHT)
                 .append("g")
@@ -172,10 +182,24 @@
                     svg.append("g")
                         .attr("class", "x axis")
                         .attr("transform", "translate(0," + height + ")")
-                        .call(xAxis);
+                        .call(xAxis)
+                        .append("text")
+                            .attr("class", "x axis-label")
+                            .attr("x", width)
+                            .attr("y", -6)
+                            .style("text-anchor", "end")
+                            .text("X-Label");
+
                     svg.append("g")
                         .attr("class", "y axis")
-                        .call(yAxis);
+                        .call(yAxis)
+                        .append("text")
+                            .attr("class", "y axis-label")
+                            .attr("transform", "rotate(-90)")
+                            .attr("y", 6)
+                            .attr("dy", ".71em")
+                            .style("text-anchor", "end")
+                            .text("Stimmenanteil");
 
                     svg.selectAll(".point")
                         .data(votes)
@@ -238,7 +262,8 @@
                                 .attr("y2", yScale(line(max)));
                         }
 
-                        d3.select('#statistic-title').html(statistic.title);
+                        d3.select("#subtitle").html(statistic.title);
+                        d3.select(".x.axis-label").html(statistic.label);
                     }
 
                     d3.select('#button-next').on("click", function () {
