@@ -32,7 +32,8 @@
     "domain": [40, 55],
     "title": "Frauenanteil",
     "label": "Frauenanteil (%)",
-    "id": "frauen"
+    "id": "frauen",
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -67,7 +68,8 @@
     "id": "kinder-und-jugendliche",
     "title": "Kinder und Jugendliche",
     "label": "Anteil Einwohner bis 18 Jahre (%)",
-    "domain": [5, 25]
+    "domain": [5, 25],
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -102,7 +104,8 @@
     "domain": [10, 30],
     "id": "senioren",
     "title": "Senioren",
-    "label": "Anteil Einwohner ab 65 Jahre (%)"
+    "label": "Anteil Einwohner ab 65 Jahre (%)",
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -137,7 +140,8 @@
     "title": "Migranten",
     "label": "Anteil Einwohner mit Migrationshintergrund (%)",
     "id": "migranten",
-    "domain": [10, 50]
+    "domain": [10, 50],
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -172,7 +176,8 @@
     "title": "Wahlbeteiligung",
     "label": "Wahlbeteiligung (%)",
     "id": "wahlbeteiligung",
-    "domain": [60, 90]
+    "domain": [60, 90],
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -207,7 +212,8 @@
     "title": "Briefwähler",
     "label": "Anteil Briefwähler (%)",
     "id": "briefwaehler",
-    "domain": [20, 50]
+    "domain": [20, 50],
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -242,7 +248,8 @@
     "title": "KA-Feedback Meldungen",
     "label": "KA-Feedback Meldungen pro 1000 Einwohner",
     "id": "ka-feedback",
-    "domain": [10, 90]
+    "domain": [10, 90],
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -277,7 +284,8 @@
     "title": "Arbeitslose",
     "label": "Arbeitslosenquote (%)",
     "id": "arbeitslose",
-    "domain": [1, 7]
+    "domain": [1, 7],
+    "analysis": "FIXME"
   },
   {
     "values": {
@@ -312,6 +320,7 @@
     "title": "Kriminalität",
     "label": "Straftaten pro 1000 Einwohner",
     "id": "straftaten",
-    "domain": [0, 500]
+    "domain": [0, 500],
+    "analysis": "FIXME"
   }
 ]

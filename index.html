@@ -2,7 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</title>
+
         <script src="vendor/d3.v4.min.js"></script>
         <script src="vendor/simple-statistics.v5.0.0.min.js"></script>
         <script src="vendor/d3-tip/d3-tip.js"></script>
@@ -73,18 +76,98 @@
                 font-size: 15px;
             }
 
+            .button {
+                text-decoration: none;
+                display: block;
+                width: 50px;
+                text-align: center;
+                font-size: 50px;
+                color: #555;
+            }
+
+            #button-prev {
+                float: left;
+            }
+
+            #button-next {
+                float: right;
+            }
+
+            #panel {
+                float: left;
+                display: inline-block;
+                width: calc(100% - 100px);
+                margin-bottom: 20px;
+                padding: 0 20px;
+            }
+
             svg {
                 width: 100%;
+                display: block;
             }
+
+            #container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            #footer {
+                font-size: 15px;
+                padding: 20px;
+                color: #ddd;
+                background-color: #555;
+                clear: both;
+                width: 100%;
+                min-height: 150px;
+            }
+
+            #footer a {
+                color: #ddd;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            #footer a:hover {
+                color: #ddd;
+                text-decoration: underline;
+            }
+
+            #footer img {
+                width: 100px;
+                float: left;
+            }
+
+            #footer p {
+                margin-left: 120px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
         </style>
     </head>
     <body>
-        <h1>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</h1>
-        <h2 id="subtitle"></h2>
-        <svg></svg>
-        <button id="button-next">Next</button>
+        <div id="container">
+            <h1>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</h1>
+            <svg></svg>
+            <div>
+                <a href="#" class="button" id="button-prev">&#9664;</a>
+                <div id="panel">
+                    <h2 id="subtitle"></h2>
+                    <div id="analysis"></div>
+                </div>
+                <a href="#" class="button" id="button-next">&#9654;</a>
+            </div>
+        </div>
+        <div id="footer">
+            <a href="https://codefor.de/karlsruhe"><img src="codeforka.svg"></a>
+            <p>Ein Projekt des <a href="https://codefor.de/karlsruhe">Open Knowledge Lab Karlsruhe</a>.</p>
+            <p>Code auf <a href="https://github.com/codeforkarlsruhe/btw2017-in-den-stadtteilen">GitHub</a>.</p>
+            <p>Verwendet Daten der Stadt Karlsruhe aus deren <a href="https://www.karlsruhe.de/b4/buergerengagement/wahlen.de">Wahlportal</a>, <a href="https://web3.karlsruhe.de/Stadtentwicklung/statistik/atlas/">Statistikatlas</a> und <a href="https://transparenz.karlsruhe.de">Transparenzportal</a>. Siehe <a href="https://github.com/codeforkarlsruhe/btw2017-in-den-stadtteilen/blob/gh-pages/LICENSE">Lizenzhinweise</a>.</p>
+        </div>
         <script>
-            var MARGIN = {top: 20, right: 50, bottom: 20, left: 50};
+            var MARGIN = {top: 20, right: 10, bottom: 20, left: 20};
             var OUTER_WIDTH = 500;
             var OUTER_HEIGHT = 500;
 
@@ -180,6 +263,7 @@
                     .style("opacity", 0.2);
             }
 
+
             d3.json("statistics.json", function (error, statistics) {
                 if (error) {
                     throw error;
@@ -242,7 +326,7 @@
                     }
 
                     function showStatistic(index, transition) {
-                        index = index % statistics.length;
+                        index = ((index % statistics.length) + statistics.length) % statistics.length;
                         currentStatistic = index;
 
                         var t = d3.transition()
@@ -285,6 +369,7 @@
                         }
 
                         d3.select("#subtitle").html(statistic.title);
+                        d3.select("#analysis").html(statistic.analysis);
                         d3.select(".x.axis-label")
                             .attr("x", width)
                             .html(statistic.label);
@@ -298,6 +383,9 @@
 
                     d3.select('#button-next').on("click", function () {
                         showStatistic(currentStatistic + 1, true);
+                    });
+                    d3.select('#button-prev').on("click", function () {
+                        showStatistic(currentStatistic - 1, true);
                     });
 
                     function resize() {
@@ -324,8 +412,6 @@
                 }
                 return a;
             }
-
-
 
         </script>
     </body>
