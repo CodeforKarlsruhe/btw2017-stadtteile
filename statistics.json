@@ -30,10 +30,10 @@
       "Nordstadt": 49.5
     },
     "domain": [40, 55],
-    "title": "Frauenanteil",
+    "title": "Frauen",
     "label": "Frauenanteil (%)",
     "id": "frauen",
-    "analysis": "FIXME"
+    "analysis": "In den Stadtteilen mit hohem Frauenanteil unter den Einwohnern haben tendenziell CDU und AfD die Nase vorn. Auch bundesweit haben Frauen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=31\">verstärkt CDU gewählt</a>, die AfD hingegen bekam deutschlandweit ihre Stimmen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=32\">eher von den Männern</a>. Klare Verlierer bei den Karlsruher Frauen sind die Grünen und die Linke."
   },
   {
     "values": {
@@ -69,7 +69,7 @@
     "title": "Junge Menschen",
     "label": "Anteil Einwohner bis 25 Jahre (%)",
     "domain": [15, 40],
-    "analysis": "FIXME"
+    "analysis": "Die Stadtteile mit vielen jungen Einwohnern wählten vor allem Grüne und Linke. CDU und AfD, die für ein traditionelles Familienbild werben, konnten dort hingegen weniger überzeugen."
   },
   {
     "values": {
@@ -105,7 +105,7 @@
     "id": "senioren",
     "title": "Senioren",
     "label": "Anteil Einwohner ab 65 Jahre (%)",
-    "analysis": "FIXME"
+    "analysis": "Obwohl sicher der Anteil der Senioren unter den Einwohnern in den Karlsruher Stadtteilen teilweise deutliche unterscheidet (Knielingen: 12.3%, Wolfartsweier: 26.4%) hatte dieser Unterschied relativ wenig Einfluss auf das Wahlergebnis."
   },
   {
     "values": {
@@ -141,7 +141,7 @@
     "label": "Anteil Einwohner mit Migrationshintergrund (%)",
     "id": "migranten",
     "domain": [10, 50],
-    "analysis": "FIXME"
+    "analysis": "Obwohl das Thema Migration im Wahlkampf der AfD eine große Rolle gespielt hat sind die Ergebnisse für die Partei in den Karlsruher Stadtteilen relativ unabhängig vom Anteil der Einwohner mit Migrationshintergrund. In Stadtteilen mit vielen Migranten punkteten vor allem Grüne und Linke, also Parteien die für eine offene Migrationspolitik stehen."
   },
   {
     "values": {
@@ -177,7 +177,7 @@
     "label": "Wahlbeteiligung (%)",
     "id": "wahlbeteiligung",
     "domain": [60, 90],
-    "analysis": "FIXME"
+    "analysis": "Von einer hohen Wahlbeteiligung profitierten in Karlsruhe die Parteien der potentiellen Jamaica-Koalition, und zwar jeweils in ähnlichem Maße. AfD und Linke punkteten dagegen vor allem dort wo weniger Menschen ihre Stimme abgaben."
   },
   {
     "values": {
@@ -213,7 +213,7 @@
     "label": "Anteil Briefwähler (%)",
     "id": "briefwaehler",
     "domain": [20, 50],
-    "analysis": "FIXME"
+    "analysis": "Überraschend große Unterschiede gibt es je nach Anteil der Briefwähler im Stadtteil: Diese bevorzugten Grüne, FDP und die Linke. CDU und AfD bekamen hingegen mehr Kreuzchen in den Wahlkabinen."
   },
   {
     "values": {
@@ -249,7 +249,7 @@
     "label": "KA-Feedback Meldungen pro 1000 Einwohner",
     "id": "ka-feedback",
     "domain": [10, 90],
-    "analysis": "FIXME"
+    "analysis": "Über die App <a href=\"http://ka-feedback.de/\">KA-Feedback</a> können KarlsruherInnen der Stadtverwaltung Probleme melden &mdash; z.B. Schlaglöcher oder verschmutzte Spielplätze. In den Stadtteilen in denen das häufig getan wird konnten vor allem Grüne und Linke überzeugen."
   },
   {
     "values": {
@@ -285,7 +285,7 @@
     "label": "Arbeitslosenquote (%)",
     "id": "arbeitslose",
     "domain": [1, 7],
-    "analysis": "FIXME"
+    "analysis": "In den Stadtteilen mit vergleichsweise hoher Arbeitslosigkeit haben sich die Wähler verstärkt für AfD und Linke entschieden. Trotz ihres Gerechtigkeitswahlkampfs konnte die SPD dort hingegen kaum zusätzliche Stimmen holen. Die wirtschaftsnahen Parteien CDU und FDP konnten in diesen Stadtteilen weniger überzeugen."
   },
   {
     "values": {
@@ -321,6 +321,6 @@
     "label": "Straftaten pro 1000 Einwohner",
     "id": "straftaten",
     "domain": [0, 500],
-    "analysis": "FIXME"
+    "analysis": "Erstaunlich ist, dass eine höhere Kriminalitätsrate nicht zu mehr Stimmen für die \"Law and Order\"-Parteien CDU und AfD führt, sondern diese im Gegenteil weniger Anteile verbuchen konnten. Dies gilt auch wenn die dominierenden Innenstadtbezirke nicht berücksichtigt werden."
   }
 ]
