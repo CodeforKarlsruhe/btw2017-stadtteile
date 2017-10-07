@@ -2,13 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
 
         <title>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</title>
 
         <script src="vendor/d3.v4.min.js"></script>
         <script src="vendor/simple-statistics.v5.0.0.min.js"></script>
         <script src="vendor/d3-tip/d3-tip.js"></script>
+        <script src="vendor/hammer.min.js"></script>
 
         <style>
             html {
@@ -409,6 +410,15 @@
                     d3.select('#button-prev').on("click", function () {
                         d3.event.preventDefault();
                         showStatistic(currentStatistic - 1, true);
+                    });
+
+                    var hammer = new Hammer(document.body);
+                    hammer.on('swipe', function(e) {
+                        if (e.deltaX > 0) {
+                            showStatistic(currentStatistic - 1, true);
+                        } else {
+                            showStatistic(currentStatistic + 1, true);
+                        }
                     });
 
                     function resize() {
