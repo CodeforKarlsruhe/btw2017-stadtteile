@@ -403,9 +403,11 @@
                     }
 
                     d3.select('#button-next').on("click", function () {
+                        d3.event.preventDefault();
                         showStatistic(currentStatistic + 1, true);
                     });
                     d3.select('#button-prev').on("click", function () {
+                        d3.event.preventDefault();
                         showStatistic(currentStatistic - 1, true);
                     });
 
