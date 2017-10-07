@@ -33,7 +33,8 @@
     "title": "Frauen",
     "label": "Frauenanteil (%)",
     "id": "frauen",
-    "analysis": "In den Stadtteilen mit hohem Frauenanteil unter den Einwohnern haben tendenziell CDU und AfD die Nase vorn. Auch bundesweit haben Frauen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=31\">verstärkt CDU gewählt</a>, die AfD hingegen bekam deutschlandweit ihre Stimmen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=32\">eher von den Männern</a>. Klare Verlierer bei den Karlsruher Frauen sind die Grünen und die Linke."
+    "analysis": "In den Stadtteilen mit hohem Frauenanteil unter den Einwohnern haben tendenziell CDU und AfD die Nase vorn. Auch bundesweit haben Frauen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=31\">verstärkt CDU gewählt</a>, die AfD hingegen bekam deutschlandweit ihre Stimmen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=32\">eher von den Männern</a>. Klare Verlierer bei den Karlsruher Frauen sind die Grünen und die Linke.",
+    "source": "Anteil der Frauen mit Hauptwohnsitz unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/bevolkerung\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
     "values": {
@@ -69,7 +70,8 @@
     "title": "Junge Menschen",
     "label": "Anteil Einwohner bis 25 Jahre (%)",
     "domain": [15, 40],
-    "analysis": "Die Stadtteile mit vielen jungen Einwohnern wählten vor allem Grüne und Linke. CDU und AfD, die für ein traditionelles Familienbild werben, konnten dort hingegen weniger überzeugen."
+    "analysis": "Die Stadtteile mit vielen jungen Einwohnern wählten vor allem Grüne und Linke. CDU und AfD, die für ein traditionelles Familienbild werben, konnten dort hingegen weniger überzeugen.",
+    "source": "Anteil der Einwohner mit Hauptwohnsitz bis einschließlich 25 Jahre unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/altersstruktur\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
     "values": {
@@ -105,7 +107,8 @@
     "id": "senioren",
     "title": "Senioren",
     "label": "Anteil Einwohner ab 65 Jahre (%)",
-    "analysis": "Obwohl sicher der Anteil der Senioren unter den Einwohnern in den Karlsruher Stadtteilen teilweise deutliche unterscheidet (Knielingen: 12.3%, Wolfartsweier: 26.4%) hatte dieser Unterschied relativ wenig Einfluss auf das Wahlergebnis."
+    "analysis": "Obwohl sicher der Anteil der Senioren unter den Einwohnern in den Karlsruher Stadtteilen teilweise deutliche unterscheidet (Knielingen: 12.3%, Wolfartsweier: 26.4%) hatte dieser Unterschied relativ wenig Einfluss auf das Wahlergebnis.",
+    "source": "Anteil der Einwohner mit Hauptwohnsitz ab 65 Jahre unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/altersstruktur\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
     "values": {
@@ -141,7 +144,8 @@
     "label": "Anteil Einwohner mit Migrationshintergrund (%)",
     "id": "migranten",
     "domain": [10, 50],
-    "analysis": "Obwohl das Thema Migration im Wahlkampf der AfD eine große Rolle gespielt hat sind die Ergebnisse für die Partei in den Karlsruher Stadtteilen relativ unabhängig vom Anteil der Einwohner mit Migrationshintergrund. In Stadtteilen mit vielen Migranten punkteten vor allem Grüne und Linke, also Parteien die für eine offene Migrationspolitik stehen."
+    "analysis": "Obwohl das Thema Migration im Wahlkampf der AfD eine große Rolle gespielt hat sind die Ergebnisse für die Partei in den Karlsruher Stadtteilen relativ unabhängig vom Anteil der Einwohner mit Migrationshintergrund. In Stadtteilen mit vielen Migranten punkteten vor allem Grüne und Linke, also Parteien die für eine offene Migrationspolitik stehen.",
+    "source": "Anteil der Einwohner mit Hauptwohnsitz mit Migrationshintergrund unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Zu den Personen mit Migrationshintergrund insgesamt zählen sowohl Personen, die nicht die deutsche Staatsangehörigkeit besitzen (Ausländer) als auch die Personen, die eine deutsche Staatsangehörigkeit besitzen und gleichzeitig anhand der Eintragungen im Einwohnermelderegister einen persönlichen Migrationshintergrund erkennen lassen (Deutsche mit Migrationshintergrund). Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/migration\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
     "values": {
@@ -177,7 +181,8 @@
     "label": "Wahlbeteiligung (%)",
     "id": "wahlbeteiligung",
     "domain": [60, 90],
-    "analysis": "Von einer hohen Wahlbeteiligung profitierten in Karlsruhe die Parteien der potentiellen Jamaica-Koalition, und zwar jeweils in ähnlichem Maße. AfD und Linke punkteten dagegen vor allem dort wo weniger Menschen ihre Stimme abgaben."
+    "analysis": "Von einer hohen Wahlbeteiligung profitierten in Karlsruhe die Parteien der potentiellen Jamaica-Koalition, und zwar jeweils in ähnlichem Maße. AfD und Linke punkteten dagegen vor allem dort wo weniger Menschen ihre Stimme abgaben.",
+    "source": "Wahlbeteiligung im jeweiligen Stadtteil bei der Bundestagswahl 2017. Quelle: <a href=\"https://web3.karlsruhe.de/Stadtentwicklung/statistik/wahlatlas/?select=Karlsruhe&date=2017\">Stadt Karlsruhe</a>."
   },
   {
     "values": {
@@ -213,7 +218,8 @@
     "label": "Anteil Briefwähler (%)",
     "id": "briefwaehler",
     "domain": [20, 50],
-    "analysis": "Überraschend große Unterschiede gibt es je nach Anteil der Briefwähler im Stadtteil: Diese bevorzugten Grüne, FDP und die Linke. CDU und AfD bekamen hingegen mehr Kreuzchen in den Wahlkabinen."
+    "analysis": "Überraschend große Unterschiede gibt es je nach Anteil der Briefwähler im Stadtteil: Diese bevorzugten Grüne, FDP und die Linke. CDU und AfD bekamen hingegen mehr Kreuzchen in den Wahlkabinen.",
+    "source": "Anteil der Briefwähler an allen Wählern im jeweiligen Stadtteil bei der Bundestagswahl 2017. Quelle: <a href=\"https://web3.karlsruhe.de/Stadtentwicklung/statistik/wahlatlas/?select=Karlsruhe&date=2017\">Stadt Karlsruhe</a>."
   },
   {
     "values": {
@@ -249,7 +255,8 @@
     "label": "KA-Feedback Meldungen pro 1000 Einwohner",
     "id": "ka-feedback",
     "domain": [10, 90],
-    "analysis": "Über die App <a href=\"http://ka-feedback.de/\">KA-Feedback</a> können KarlsruherInnen der Stadtverwaltung Probleme melden &mdash; z.B. Schlaglöcher oder verschmutzte Spielplätze. In den Stadtteilen in denen das häufig getan wird konnten vor allem Grüne und Linke überzeugen."
+    "analysis": "Über die App <a href=\"http://ka-feedback.de/\">KA-Feedback</a> können KarlsruherInnen der Stadtverwaltung Probleme melden &mdash; z.B. Schlaglöcher oder verschmutzte Spielplätze. In den Stadtteilen in denen das häufig getan wird konnten vor allem Grüne und Linke überzeugen.",
+    "source": "Meldungen in KA-Feedback für den jeweiligen Stadtteil im Jahr 2016 pro 1000 Einwohner. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/ka-feedback-meldungen\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
     "values": {
@@ -285,7 +292,8 @@
     "label": "Arbeitslosenquote (%)",
     "id": "arbeitslose",
     "domain": [1, 7],
-    "analysis": "In den Stadtteilen mit vergleichsweise hoher Arbeitslosigkeit haben sich die Wähler verstärkt für AfD und Linke entschieden. Trotz ihres Gerechtigkeitswahlkampfs konnte die SPD dort hingegen kaum zusätzliche Stimmen holen. Die wirtschaftsnahen Parteien CDU und FDP konnten in diesen Stadtteilen weniger überzeugen."
+    "analysis": "In den Stadtteilen mit vergleichsweise hoher Arbeitslosigkeit haben sich die Wähler verstärkt für AfD und Linke entschieden. Trotz ihres Gerechtigkeitswahlkampfs konnte die SPD dort hingegen kaum zusätzliche Stimmen holen. Die wirtschaftsnahen Parteien CDU und FDP konnten in diesen Stadtteilen weniger überzeugen.",
+    "source": "Anteil der Arbeitslosen mit Hauptwohnsitz an der erwerbsfähigen Bevölkerung mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://web3.karlsruhe.de/Stadtentwicklung/statistik/atlas/index.html?indicator=i94\">Stadt Karlsruhe</a>."
   },
   {
     "values": {
@@ -321,6 +329,7 @@
     "label": "Straftaten pro 1000 Einwohner",
     "id": "straftaten",
     "domain": [0, 500],
-    "analysis": "Erstaunlich ist, dass eine höhere Kriminalitätsrate nicht zu mehr Stimmen für die \"Law and Order\"-Parteien CDU und AfD führt, sondern diese im Gegenteil weniger Anteile verbuchen konnten. Dies gilt auch wenn die dominierenden Innenstadtbezirke nicht berücksichtigt werden."
+    "analysis": "Erstaunlich ist, dass eine höhere Kriminalitätsrate nicht zu mehr Stimmen für die \"Law and Order\"-Parteien CDU und AfD führt, sondern diese im Gegenteil weniger Anteile verbuchen konnten. Dies gilt auch wenn die dominierenden Innenstadtbezirke nicht berücksichtigt werden.",
+    "source": "Zahl der gemeldeten Straftaten mit Tatort im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://web3.karlsruhe.de/Stadtentwicklung/statistik/atlas/index.html?indicator=i109\">Stadt Karlsruhe</a>."
   }
 ]

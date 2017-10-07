@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</title>
 
@@ -97,8 +97,8 @@
                 float: left;
                 display: inline-block;
                 width: calc(100% - 100px);
-                margin-bottom: 20px;
                 padding: 0 20px;
+                margin-bottom: 30px;
             }
 
             svg {
@@ -145,6 +145,22 @@
                 font-size: 27px;
             }
 
+            #source {
+                margin-top: 30px;
+                font-size: 13px;
+                color: #888;
+            }
+
+            #source a,
+            #source a:visited,
+            #source a:hover,
+            #source a:active {
+                color: #888;
+            }
+
+            #source-y {
+                margin-top: 1em;
+            }
         </style>
     </head>
     <body>
@@ -156,15 +172,18 @@
                 <div id="panel">
                     <h2 id="subtitle"></h2>
                     <div id="analysis"></div>
+                    <div id="source">
+                        <div id="source-x"></div>
+                        <div id="source-y"><strong>Y-Achse:</strong> Anteil der dargestellten Parteien an den Erst- und Zweitstimmen bei der Bundestagswahl 2017 im jeweiligen Stadtteil. Quelle: <a href="https://web3.karlsruhe.de/Stadtentwicklung/statistik/wahlatlas/?select=Karlsruhe&date=2017">Stadt Karlsruhe</a>.</div>
+                    </div>
                 </div>
                 <a href="#" class="button" id="button-next">&#9654;</a>
             </div>
         </div>
         <div id="footer">
-            <a href="https://codefor.de/karlsruhe"><img src="codeforka.svg"></a>
+            <a href="https://codefor.de/karlsruhe"><img src="codeforka.svg" alt="Logo von Code for Karlsruhe"></a>
             <p>Ein Projekt des <a href="https://codefor.de/karlsruhe">Open Knowledge Lab Karlsruhe</a>.</p>
             <p>Code auf <a href="https://github.com/codeforkarlsruhe/btw2017-in-den-stadtteilen">GitHub</a>.</p>
-            <p>Verwendet Daten der Stadt Karlsruhe aus deren <a href="https://www.karlsruhe.de/b4/buergerengagement/wahlen.de">Wahlportal</a>, <a href="https://web3.karlsruhe.de/Stadtentwicklung/statistik/atlas/">Statistikatlas</a> und <a href="https://transparenz.karlsruhe.de">Transparenzportal</a>. Siehe <a href="https://github.com/codeforkarlsruhe/btw2017-in-den-stadtteilen/blob/gh-pages/LICENSE">Lizenzhinweise</a>.</p>
         </div>
         <script>
             var MARGIN = {top: 20, right: 10, bottom: 20, left: 20};
@@ -370,6 +389,7 @@
 
                         d3.select("#subtitle").html(statistic.title);
                         d3.select("#analysis").html(statistic.analysis);
+                        d3.select("#source-x").html("<strong>X-Achse:</strong> " + statistic.source);
                         d3.select(".x.axis-label")
                             .attr("x", width)
                             .html(statistic.label);
