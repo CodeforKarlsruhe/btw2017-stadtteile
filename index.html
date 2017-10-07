@@ -122,7 +122,7 @@
                 font-size: 30px;
                 text-align: center;
             }
-            @media (max-width: 400px) {
+            @media (max-width: 450px) {
                 #subtitle {
                     font-size: 6vw;
                 }
@@ -130,6 +130,9 @@
 
             svg {
                 width: 100%;
+                height: 50vh;
+                min-height: 300px;
+                max-height: 500px;
                 display: block;
             }
 
@@ -140,6 +143,7 @@
             }
 
             #footer {
+                margin-top: 30px;
                 font-size: 12px;
                 color: #555;
                 clear: both;
@@ -173,6 +177,11 @@
                 font-size: 27px;
                 width: 100%;
                 text-align: center;
+            }
+            @media (max-width: 450px) {
+                h1 {
+                    font-size: 7vw;
+                }
             }
 
             #source {
@@ -225,24 +234,23 @@
         </div>
         <script>
             var MARGIN = {top: 20, right: 10, bottom: 20, left: 20};
-            var OUTER_WIDTH = 500;
-            var OUTER_HEIGHT = 500;
 
-            var width = OUTER_WIDTH - MARGIN.left - MARGIN.right
-                height = OUTER_HEIGHT - MARGIN.top - MARGIN.bottom;
+            function width() {
+                return d3.select("svg").node().clientWidth - MARGIN.left - MARGIN.right;
+            }
+
+            function height() {
+                return d3.select("svg").node().clientHeight - MARGIN.top - MARGIN.bottom;
+            }
 
             var svg = d3.select("svg")
-                .attr("width", OUTER_WIDTH)
-                .attr("height", OUTER_HEIGHT)
                 .append("g")
                     .attr("transform", "translate(" + MARGIN.left + "," + MARGIN.top + ")");
 
             var xScale = d3.scaleLinear()
-                .domain([0, 100])
-                .range([0, width]);
+                .domain([0, 100]);
             var yScale = d3.scaleLinear()
-                .domain([0, 40])
-                .range([height, 0]);
+                .domain([0, 40]);
 
             var xAxis = d3.axisBottom(xScale)
                 .ticks(5);
@@ -341,7 +349,6 @@
 
                     svg.append("g")
                         .attr("class", "x axis")
-                        .attr("transform", "translate(0," + height + ")")
                         .call(xAxis)
                         .append("text")
                             .attr("class", "x axis-label")
@@ -429,7 +436,7 @@
                         d3.select("#analysis").html(statistic.analysis);
                         d3.select("#source-x").html("<strong>X-Achse:</strong> " + statistic.source);
                         d3.select(".x.axis-label")
-                            .attr("x", width)
+                            .attr("x", width())
                             .html(statistic.label);
 
                         tip.html(function(d) {
@@ -458,9 +465,10 @@
                     });
 
                     function resize() {
-                        OUTER_WIDTH = d3.select("svg").node().clientWidth;
-                        width = OUTER_WIDTH - MARGIN.left - MARGIN.right;
-                        xScale.range([0, width]);
+                        xScale.range([0, width()]);
+                        yScale.range([height(), 0]);
+                        d3.select(".x.axis").attr("transform", "translate(0," + height() + ")");
+                        svg.selectAll(".y.axis").call(yAxis);
                         showStatistic(currentStatistic);
                     }
 
