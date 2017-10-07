@@ -81,25 +81,51 @@
                 text-decoration: none;
                 display: block;
                 width: 50px;
+                height: 50px;
+                line-height: 50px;
                 text-align: center;
                 font-size: 50px;
                 color: #555;
+                background-size: 75% 75%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            #control {
+                position: relative;
+                width: 100%;
+                height: 50px;
+                margin: 20px 0;
             }
 
             #button-prev {
-                float: left;
+                position: absolute;
+                left: 0;
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
             }
 
             #button-next {
-                float: right;
+                position: absolute;
+                right: 0;
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
             }
 
-            #panel {
-                float: left;
-                display: inline-block;
+            #subtitle {
+                position: absolute;
+                left: 50px;
+                display: block;
                 width: calc(100% - 100px);
                 padding: 0 20px;
-                margin-bottom: 50px;
+                margin: 0;
+                line-height: 50px;
+                height: 50px;
+                font-size: 30px;
+                text-align: center;
+            }
+            @media (max-width: 400px) {
+                #subtitle {
+                    font-size: 6vw;
+                }
             }
 
             svg {
@@ -145,6 +171,8 @@
 
             h1 {
                 font-size: 27px;
+                width: 100%;
+                text-align: center;
             }
 
             #source {
@@ -163,6 +191,14 @@
             #source-y {
                 margin-top: 1em;
             }
+
+            #analysis a,
+            #analysis a:hover,
+            #analysis a:active,
+            #analysis a:visited {
+                color: #000;
+            }
+
         </style>
     </head>
     <body>
@@ -170,16 +206,16 @@
             <h1>Die Bundestagswahl 2017 in den Karlsruher Stadtteilen</h1>
             <svg></svg>
             <div>
-                <a href="#" class="button" id="button-prev">&#9664;</a>
-                <div id="panel">
+                <div id="control">
+                    <a href="#" class="button" id="button-prev"></a>
                     <h2 id="subtitle"></h2>
-                    <div id="analysis"></div>
-                    <div id="source">
-                        <div id="source-x"></div>
-                        <div id="source-y"><strong>Y-Achse:</strong> Anteil der dargestellten Parteien an den Erst- und Zweitstimmen bei der Bundestagswahl 2017 im jeweiligen Stadtteil. Quelle: <a href="https://web3.karlsruhe.de/Stadtentwicklung/statistik/wahlatlas/?select=Karlsruhe&date=2017">Stadt Karlsruhe</a>.</div>
-                    </div>
+                    <a href="#" class="button" id="button-next"></a>
                 </div>
-                <a href="#" class="button" id="button-next">&#9654;</a>
+                <div id="analysis"></div>
+                <div id="source">
+                    <div id="source-x"></div>
+                    <div id="source-y"><strong>Y-Achse:</strong> Anteil der dargestellten Parteien an den Erst- und Zweitstimmen bei der Bundestagswahl 2017 im jeweiligen Stadtteil. Quelle: <a href="https://web3.karlsruhe.de/Stadtentwicklung/statistik/wahlatlas/?select=Karlsruhe&date=2017">Stadt Karlsruhe</a>.</div>
+                </div>
             </div>
         </div>
         <div id="footer">

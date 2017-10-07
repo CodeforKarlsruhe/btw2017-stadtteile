@@ -251,11 +251,11 @@
       "Neureut": 39.9,
       "Nordstadt": 58.8
     },
-    "title": "KA-Feedback Meldungen",
+    "title": "KA-Feedback",
     "label": "KA-Feedback Meldungen pro 1000 Einwohner",
     "id": "ka-feedback",
     "domain": [10, 90],
-    "analysis": "Über die App <a href=\"http://ka-feedback.de/\">KA-Feedback</a> können KarlsruherInnen der Stadtverwaltung Probleme melden &mdash; z.B. Schlaglöcher oder verschmutzte Spielplätze. In den Stadtteilen in denen das häufig getan wird konnten vor allem Grüne und Linke überzeugen.",
+    "analysis": "Über die App <a href=\"http://ka-feedback.de/\">KA-Feedback</a> können KarlsruherInnen der Stadtverwaltung Probleme melden &mdash; z.B. Schlaglöcher oder verschmutzte Spielplätze. In den Stadtteilen in denen das häufig getan wird erzielten Grüne und Linke überdurchschnittliche Ergebnisse.",
     "source": "Meldungen in KA-Feedback für den jeweiligen Stadtteil im Jahr 2016 pro 1000 Einwohner. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/ka-feedback-meldungen\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
