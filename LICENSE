@@ -1,0 +1,75 @@
+Die 3rd-Party Bibliotheken im Verzeichnis `vendor` stehen unter folgenden Lizenzen:
+
+    d3-tip:
+        Copyright (c) 2013 Justin Palmer
+        With modifications by David Gotz
+        Apache-Lizenz, siehe `vendor/d3-tip/LICENSE`
+
+    d3:
+        Copyright 2010-2017 Mike Bostock
+        BSD-Lizenz, siehe `vendor/d3/LICENSE`
+
+    hammer:
+        Copyright (C) 2011-2017 by Jorik Tangelder (Eight Media)
+        MIT-Lizenz, siehe `vendor/hammer/LICENSE`
+
+    simple-statistics:
+        Copyright (c) 2014, Tom MacWright
+        ISC-Lizenz, siehe `vendor/simple-statistics/LICENSE`
+
+
+Für den verbleibenden Quellcode gilt:
+
+    The MIT License (MIT)
+
+    Copyright (c) 2017 Code for Karlsruhe
+
+    Permission is hereby granted, free of charge, to any person obtaining a
+    copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+Die Daten in der Datei `statistics.json` wurden aus verschiedenen
+Veröffentlichungen der Stadt Karlsruhe aggregiert:
+
+    Datensatz "Bevölkerung", Stadt Karlsruhe (https://karlsruhe.de).
+    Veröffentlicht unter der Lizenz "Datenlizenz Deutschland – Namensnennung
+    – Version 2.0" (https://www.govdata.de/dl-de/by-2-0). Siehe
+    https://transparenz.karlsruhe.de/dataset/74561f6a-4783-4d70-b86a-008deec09441.
+
+    Datensatz "Altersstruktur", Stadt Karlsruhe (https://karlsruhe.de).
+    Veröffentlicht unter der Lizenz "Datenlizenz Deutschland – Namensnennung
+    – Version 2.0" (https://www.govdata.de/dl-de/by-2-0). Siehe
+    https://transparenz.karlsruhe.de/dataset/cc50eb96-6c3d-4d6f-9dcd-c56c4969ff59.
+
+    Datensatz "Migration", Stadt Karlsruhe (https://karlsruhe.de).
+    Veröffentlicht unter der Lizenz "Datenlizenz Deutschland – Namensnennung
+    – Version 2.0" (https://www.govdata.de/dl-de/by-2-0). Siehe
+    https://transparenz.karlsruhe.de/dataset/9bc7289b-ba18-47cc-a5bb-75bb622759ab.
+
+    Datensatz "KA-Feedback Meldungen", Stadt Karlsruhe (https://karlsruhe.de).
+    Veröffentlicht unter der Lizenz "Datenlizenz Deutschland – Namensnennung
+    – Version 2.0" (https://www.govdata.de/dl-de/by-2-0). Siehe
+    https://transparenz.karlsruhe.de/dataset/08bf8e15-a448-4524-808e-02e8c553a7eb.
+
+    Wahlatlas der Stadt Karlsruhe,
+    https://web3.karlsruhe.de/Stadtentwicklung/statistik/wahlatlas
+
+    Statistikatlas der Stadt Karlsruhe,
+    https://web3.karlsruhe.de/Stadtentwicklung/statistik/atlas
+
