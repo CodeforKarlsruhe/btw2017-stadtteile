@@ -460,7 +460,8 @@
                         showStatistic(currentStatistic - 1, true);
                     });
 
-                    var hammer = new Hammer(document.body);
+                    delete Hammer.defaults.cssProps.userSelect; // Allow text selection
+                    var hammer = new Hammer(document.body, { inputClass: Hammer.TouchInput });
                     hammer.on('swipe', function(e) {
                         if (e.deltaX > 0) {
                             showStatistic(currentStatistic - 1, true);
