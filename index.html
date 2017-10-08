@@ -241,11 +241,11 @@
             var MARGIN = {top: 20, right: 10, bottom: 20, left: 20};
 
             function width() {
-                return d3.select("svg").node().clientWidth - MARGIN.left - MARGIN.right;
+                return d3.select("svg").node().getBoundingClientRect().width - MARGIN.left - MARGIN.right;
             }
 
             function height() {
-                return d3.select("svg").node().clientHeight - MARGIN.top - MARGIN.bottom;
+                return d3.select("svg").node().getBoundingClientRect().height - MARGIN.top - MARGIN.bottom;
             }
 
             var svg = d3.select("svg")
