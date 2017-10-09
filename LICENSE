@@ -44,8 +44,8 @@ Für den verbleibenden Quellcode gilt:
     SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-Die Daten in der Datei `statistics.json` wurden aus verschiedenen
-Veröffentlichungen der Stadt Karlsruhe aggregiert:
+Die Daten in den Dateien `statistics.json` und `votes.json` wurden aus
+verschiedenen Veröffentlichungen der Stadt Karlsruhe aggregiert:
 
     Datensatz "Bevölkerung", Stadt Karlsruhe (https://karlsruhe.de).
     Veröffentlicht unter der Lizenz "Datenlizenz Deutschland – Namensnennung
