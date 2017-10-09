@@ -107,7 +107,7 @@
     "id": "senioren",
     "title": "Senioren",
     "label": "Anteil Einwohner ab 65 Jahre (%)",
-    "analysis": "Obwohl sicher der Anteil der Senioren unter den Einwohnern in den Karlsruher Stadtteilen teilweise deutliche unterscheidet (Knielingen: 12.3%, Wolfartsweier: 26.4%) hatte dieser Unterschied relativ wenig Einfluss auf das Wahlergebnis.",
+    "analysis": "Obwohl sicher der Anteil der Senioren unter den Einwohnern in den Karlsruher Stadtteilen teilweise deutlich unterscheidet (Knielingen: 12.3%, Wolfartsweier: 26.4%) hatte dieser Unterschied relativ wenig Einfluss auf das Wahlergebnis.",
     "source": "Anteil der Einwohner mit Hauptwohnsitz ab 65 Jahre unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/altersstruktur\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
@@ -144,7 +144,7 @@
     "label": "Anteil Einwohner mit Migrationshintergrund (%)",
     "id": "migranten",
     "domain": [10, 50],
-    "analysis": "Obwohl das Thema Migration im Wahlkampf der AfD eine große Rolle gespielt hat sind die Ergebnisse für die Partei in den Karlsruher Stadtteilen relativ unabhängig vom Anteil der Einwohner mit Migrationshintergrund. In Stadtteilen mit vielen Migranten punkteten vor allem Grüne und Linke, also Parteien die für eine offene Migrationspolitik stehen.",
+    "analysis": "Obwohl das Thema Migration im Wahlkampf der AfD eine große Rolle gespielt hat, sind die Ergebnisse für die Partei in den Karlsruher Stadtteilen relativ unabhängig vom Anteil der Einwohner mit Migrationshintergrund. In Stadtteilen mit vielen Migranten punkteten vor allem Grüne und Linke, also Parteien die für eine offene Migrationspolitik stehen.",
     "source": "Anteil der Einwohner mit Hauptwohnsitz mit Migrationshintergrund unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Zu den Personen mit Migrationshintergrund insgesamt zählen sowohl Personen, die nicht die deutsche Staatsangehörigkeit besitzen (Ausländer) als auch die Personen, die eine deutsche Staatsangehörigkeit besitzen und gleichzeitig anhand der Eintragungen im Einwohnermelderegister einen persönlichen Migrationshintergrund erkennen lassen (Deutsche mit Migrationshintergrund). Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/migration\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
@@ -255,7 +255,7 @@
     "label": "KA-Feedback Meldungen pro 1000 Einwohner",
     "id": "ka-feedback",
     "domain": [10, 90],
-    "analysis": "Über die App <a href=\"http://ka-feedback.de/\">KA-Feedback</a> können KarlsruherInnen der Stadtverwaltung Probleme melden &mdash; z.B. Schlaglöcher oder verschmutzte Spielplätze. In den Stadtteilen in denen das häufig getan wird erzielten Grüne und Linke überdurchschnittliche Ergebnisse.",
+    "analysis": "Über die App <a href=\"http://ka-feedback.de/\">KA-Feedback</a> können KarlsruherInnen der Stadtverwaltung Probleme melden &mdash; z.B. Schlaglöcher oder verschmutzte Spielplätze. In den Stadtteilen, in denen das häufig getan wird, erzielten Grüne und Linke überdurchschnittliche Ergebnisse.",
     "source": "Meldungen in KA-Feedback für den jeweiligen Stadtteil im Jahr 2016 pro 1000 Einwohner. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/ka-feedback-meldungen\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
