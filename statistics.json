@@ -33,7 +33,7 @@
     "title": "Frauen",
     "label": "Frauenanteil (%)",
     "id": "frauen",
-    "analysis": "In den Stadtteilen mit hohem Frauenanteil unter den Einwohnern werden tendenziell häufiger CDU und AfD gewählt als in solchen mit niedrigerem Frauenanteil. Auch bundesweit haben Frauen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=31\">verstärkt CDU gewählt</a>, die AfD hingegen bekam deutschlandweit ihre Stimmen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=32\">eher von den Männern</a>. Klare Verlierer bei den Karlsruher Frauen sind die Grünen und die Linke. Ein Grund hierfür könnte die Korrelation zwischen dem Anteil junger Menschen und dem Frauenanteil sein: In Stadtteilen mit überdurchschnittlich vielen jungen Menschen (Innenstadt-West, Oststadt, Innenstadt-Ost, Südstadt) ist der Frauenanteil tendenziell geringer als in Stadtteilen mit weniger jungen Menschen. Wie die Analyse im Hinblick auf das Wahlverhalten junger Menschen zeigt, sind es aber diese, die eher Grüne und Linke wählen.",
+    "analysis": "In den Stadtteilen mit hohem Frauenanteil haben CDU und AfD überdurchschnittlich gut abgeschnitten. Auch bundesweit haben Frauen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=31\">verstärkt CDU gewählt</a>, die AfD hingegen bekam deutschlandweit ihre Stimmen <a href=\"https://wahltool.zdf.de/wahlergebnisse/2017-09-24-BT-DE.html?i=32\">eher von den Männern</a>. Klare Verlierer bei den Karlsruher Frauen sind die Grünen und die Linke.",
     "source": "Anteil der Frauen mit Hauptwohnsitz unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/bevolkerung\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
@@ -70,7 +70,7 @@
     "title": "Junge Menschen",
     "label": "Anteil Einwohner bis 25 Jahre (%)",
     "domain": [15, 40],
-    "analysis": "Die Stadtteile mit vielen jungen Einwohnern wählten vor allem Grüne und Linke. CDU und AfD, die für ein traditionelles Familienbild werben, konnten dort hingegen weniger überzeugen.",
+    "analysis": "Die Stadtteile mit vielen jungen Einwohnern wählten bevorzugt Grüne und Linke. CDU und AfD, die für ein traditionelles Familienbild werben, konnten dort hingegen weniger überzeugen.",
     "source": "Anteil der Einwohner mit Hauptwohnsitz bis einschließlich 25 Jahre unter allen Einwohnern mit Hauptwohnsitz im jeweiligen Stadtteil im Jahr 2016. Quelle: <a href=\"https://transparenz.karlsruhe.de/dataset/altersstruktur\">Stadt Karlsruhe</a>, veröffentlicht unter der <a href=\"https://www.govdata.de/dl-de/by-2-0\">Datenlizenz Deutschland &mdash; Namensnennung &mdash; Version 2.0</a>."
   },
   {
